@@ -1,6 +1,8 @@
 ## jQuery Modal
 [WIP] A small plugin to spawn modals with terse API that also handles Web Accessibility.
 
+[Demo](http://submariner-boar-66106.netlify.com/)
+
 ## Why?
 - [NIH](https://en.wikipedia.org/wiki/Not_invented_here)
 - Most similar plugins out there seem to be feature-complete but complicated
