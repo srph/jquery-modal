@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Modal</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="vendor.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <main id="main">
+    <button type="button" data-modal="#modal">
+      Open Modal
+    </button>
+
+    <button type="button" data-modal="#modal-2">
+      Open Modal 2
+    </button>
+  </main>
+
+  <div class="modal" id="modal" style="display: none;">
+    <div class="dialogue" tabindex="-1">
+      <h1>This is an awesome modal.</h1>
+
+      <button type="button" data-modal-close="#modal">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-2" style="display: none;">
+    <div class="dialogue" tabindex="-1">
+      <h1>This is an even more awesome modal.</h1>
+
+      <button type="button" data-modal-close="#modal-2">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
