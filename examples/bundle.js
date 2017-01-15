@@ -10277,7 +10277,7 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const $ = __webpack_require__(1);
+	const $ = window.$ = __webpack_require__(1);
 	const modal = __webpack_require__(3);
 	const ModalError = __webpack_require__(14);
 
@@ -10285,14 +10285,20 @@
 	  opts = opts || {};
 
 	  $(this).each(function() {
+	    var el = $(this);
+
 	    if ( typeof opts === 'string' ) {
-	      if ( !this.modal ) {
-	        throw new ModalError(`Element hasn't been initialized yet!`);
+	      if ( !el.data('modal') ) {
+	        throw new ModalError('Element hasn\'t been initialized yet!');
 	      }
 
-	      this.modal[opts]();
+	      el.data('modal')[opts]();
 	    } else if ( typeof opts === 'object' ) {
-	      this.modal = modal(this, opts);
+	      if ( el.data('modal') ) {
+	        throw new ModalError('This element has already been initialized!');
+	      }
+
+	      el.data('modal', modal(el, opts));
 	    }
 	  });
 
@@ -10340,16 +10346,17 @@
 
 	function Modal(el, opts) {
 	  if (!(this instanceof Modal)) return new Modal(el, opts);
+
+	  opts = this.opts = $.extend({}, opts, {
+	    escapable: true,
+	    backdrop: el
+	  });
+
 	  this.init = false;
 	  this.status = false; // Open status
-	  this.node = el;
-	  this.wrapped = $(el);
-	  this.opts = $.extend(opts, {
-	    escapable: true,
-	    backdrop: this.wrapped
-	  });
-	  this.dialogue = this.wrapped.children().get(0);
-	  this.jqt = this.wrapped.jqt({ speed: this.opts.speed });
+	  this.el = el;
+	  this.dialogue = el.children().get(0);
+	  this.jqt = el.jqt({ speed: opts.speed });
 	  this.bind();
 	}
 
@@ -10364,10 +10371,6 @@
 	   */
 	  bind: function() {
 	    var self = this;
-
-	    if ( self.init ) {
-	      throw new ModalError('This element has already been initialized!');
-	    }
 
 	    self.init = true;
 
@@ -10402,9 +10405,8 @@
 	    body.addClass('modal-open');
 	    this.jqt.enter(function() {
 	      a11y.focus(Modal.main, this.dialogue);
+	      this.el.trigger('modal:open');
 	    }.bind(this));
-
-	    this.wrapped.trigger('modal:open');
 	  },
 
 	  /**
@@ -10417,9 +10419,8 @@
 	    body.removeClass('modal-open');
 	    this.jqt.exit(function() {
 	      a11y.restore(Modal.main);
-	    });
-
-	    this.wrapped.trigger('modal:close');
+	      this.el.trigger('modal:close');
+	    }.bind(this));
 	  },
 	};
 
