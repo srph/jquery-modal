@@ -5,7 +5,7 @@ module.exports = {
     path: './dist',
     filename: process.env.NODE_ENV === 'production'
       ? 'jquery.modal.min.js'
-      : 'jquery.modal.min.js'
+      : 'jquery.modal.js'
   },
 
   module: {
