@@ -4,6 +4,8 @@
   "description": "A small plugin to spawn modals with terse API",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run build && npm run minify && npm run style",
+    "style": "cp examples/vendor.css dist/jquery.modal.vendor.css && cp examples/theme.css dist/jquery.modal.theme.css",
     "build": "webpack --verbose --progress",
     "minify": "webpack --verbose --progress --production",
     "example:build": "webpack --verbose --progress --config=examples/webpack.config.js",

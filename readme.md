@@ -1,14 +1,18 @@
 ## jQuery Modal
 [WIP] A small plugin to spawn modals with terse API that also handles Web Accessibility.
 
+## Why?
+- [NIH](https://en.wikipedia.org/wiki/Not_invented_here)
+- Most similar plugins out there seem to be feature-complete but complicated
+
 ## Goals
 - Simple yet customizable
 - Terse API
 - [Accessibility](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
 
-## Why?
-- [NIH](https://en.wikipedia.org/wiki/Not_invented_here).
-- Most similar plugins out there seem to be feature-complete but complicated.
+## Unsupported
+- Nested modals (will not work)
+- Old browsers (may work)
 
 ## Usage
 ```js

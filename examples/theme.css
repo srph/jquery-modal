@@ -1,0 +1,44 @@
+.dialogue {
+  position: relative;
+  margin: 50px auto;
+  padding: 25px;
+  width: 400px;
+  background: #fff;
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.modal.enter {
+  opacity: 0;
+}
+
+.modal.enter-active {
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+.modal.leave {
+  opacity: 1;
+}
+
+.modal.leave-active {
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.modal.enter .dialogue {
+  transform: translateY(-100px);
+}
+
+.modal.enter-active .dialogue {
+  transform: translateY(0);
+  transition: 0.2s ease;
+}
+
+.modal.leave .dialogue {
+  transform: translateY(0);
+}
+
+.modal.leave-active .dialogue {
+  transform: translateY(-100px);
+  transition: 0.2s ease;
+}
