@@ -35,8 +35,8 @@ $modal.modal('close') // Programatically close
 |escapable|Close modal on escape|`boolean`|`true`|
 
 ## Events
-- `$modal.on('modal:open')` - Triggered when modal is opened
-- `$modal.on('modal:close')` - Triggered when modal is closed
+- `$modal.on('modal:open', cb)` - Triggered when modal is opened
+- `$modal.on('modal:close', cb)` - Triggered when modal is closed
 
 ## Contributing
 ```
