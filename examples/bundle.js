@@ -10279,7 +10279,7 @@
 
 	const $ = __webpack_require__(1);
 	const modal = __webpack_require__(3);
-	const error = __webpack_require__(14);
+	const ModalError = __webpack_require__(14);
 
 	$.fn.modal = function interface(opts) {
 	  opts = opts || {};
@@ -10287,7 +10287,7 @@
 	  $(this).each(function() {
 	    if ( typeof opts === 'string' ) {
 	      if ( !this.modal ) {
-	        error(`Element hasn't been initialized yet!`);
+	        throw new ModalError(`Element hasn't been initialized yet!`);
 	      }
 
 	      this.modal[opts]();
@@ -10334,7 +10334,7 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	const a11y = __webpack_require__(9);
-	const error = __webpack_require__(14);
+	const ModalError = __webpack_require__(14);
 	const body = $('body');
 	const doc = $(document);
 
@@ -10366,7 +10366,7 @@
 	    var self = this;
 
 	    if ( self.init ) {
-	      error('This element has already been initialized!');
+	      throw new ModalError('This element has already been initialized!');
 	    }
 
 	    self.init = true;
@@ -11707,9 +11707,16 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	module.exports = function err(msg) {
-	  throw new Error('jquery-modal: ' + msg);
+	function ModalError(msg) {
+	  this.name = 'ModalError';
+	  this.message = 'jquery-modal: ' + message;
+	  this.stack = (new Error()).stack;
 	}
+
+	ModalError.prototype = Object.create(Error.prototype);
+	ModalError.prototype.constructor = ModalError;
+
+	module.exports = ModalError;
 
 /***/ }
 /******/ ]);
