@@ -7,7 +7,7 @@
 - [Accessibility](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
 
 ## Usage
-```
+```js
 <button type="button" data-modal="#my-modal">
   Open Modal
 </button>
@@ -39,7 +39,7 @@ $modal.modal('close') // Programatically close
 - `$modal.on('modal:close', cb)` - Triggered when modal is closed
 
 ## Contributing
-```
+```bash
 npm run example:build # Build example
 npm run example:start # Build example, and watch for changes
 open examples/index.html
