@@ -6,6 +6,10 @@
 - Terse API
 - [Accessibility](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
 
+## Why?
+- [NIH](https://en.wikipedia.org/wiki/Not_invented_here).
+- Most similar plugins out there seem to be feature-complete but complicated.
+
 ## Usage
 ```js
 <button type="button" data-modal="#my-modal">
