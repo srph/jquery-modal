@@ -1,5 +1,5 @@
 ## jQuery Modal
-[WIP] A small plugin to spawn modals with terse API that also handles Web Accessibility.
+[WIP] A jQuery plugin to spawn modals with terse API that also handles Web Accessibility.
 
 [Demo](http://submariner-boar-66106.netlify.com/)
 
@@ -10,7 +10,8 @@
 ## Goals
 - Simple yet customizable
 - Terse API
-- [Accessibility](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
+- Transitions
+- [Accesible](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
 
 ## Unsupported
 - Nested modals (will not work)
