@@ -11,7 +11,7 @@ A jQuery plugin to spawn modals with terse API that also handles Web Accessibili
 - Simple yet customizable
 - Terse API
 - Transitions
-- [Accesible](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
+- [Accessible](https://gist.github.com/ryanflorence/fd7e987c832cc4efaa56)
 
 ## Unsupported
 - Nested modals (will not work)
