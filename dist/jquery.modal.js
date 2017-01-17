@@ -205,7 +205,7 @@
 
 	var $ = __webpack_require__(1);
 	var compensate = __webpack_require__(4);
-	$(function() { compensate('.modal-open'); });
+	$(function() { compensate(['.modal-open']); });
 
 /***/ },
 /* 4 */

@@ -17,6 +17,10 @@
     "modal",
     "dialogue"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srph/jquery-modal"
+  },
   "author": "Kier Borromeo <seraphipod@gmail.com>",
   "license": "MIT",
   "devDependencies": {
