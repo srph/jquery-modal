@@ -7,7 +7,7 @@
     "prepublish": "npm run build && npm run minify && npm run style",
     "style": "cp examples/vendor.css dist/jquery.modal.vendor.css && cp examples/theme.css dist/jquery.modal.theme.css",
     "build": "webpack --verbose --progress",
-    "minify": "webpack --verbose --progress --production",
+    "minify": "NODE_ENV=production webpack --verbose --progress -p",
     "example:build": "webpack --verbose --progress --config=examples/webpack.config.js",
     "example:start": "webpack -w --verbose --progress --config=examples/webpack.config.js"
   },

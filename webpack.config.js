@@ -14,5 +14,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'imports-loader?$=jquery,@srph/jqt=>null',
     }]
-  }
-}
+  },
+
+  externals: [{
+    jquery: 'jQuery',
+    '@srph/jqt': 'jQuery'
+  }]
+};
