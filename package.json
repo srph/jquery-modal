@@ -1,5 +1,5 @@
 {
-  "name": "jquery-modal",
+  "name": "@srph/jquery-modal",
   "version": "0.1.0",
   "description": "A jQuery plugin to spawn modals with terse API",
   "main": "lib/index.js",
