@@ -1,5 +1,5 @@
 ## jQuery Modal [![npm version](http://img.shields.io/npm/v/@srph/jquery-modal.svg?style=flat)](https://npmjs.org/package/jquery-modal)
-A jQuery plugin to spawn modals with terse API that also handles Web Accessibility.
+Spawn modals with jQuery.
 
 [Demo](http://submariner-boar-66106.netlify.com/)
 
