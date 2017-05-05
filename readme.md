@@ -25,7 +25,7 @@ Spawn modals with jQuery.
 
 <div id="my-modal">
   <!-- Modal Markup -->
-  <button type="button" data-modal-close="my-modal">
+  <button type="button" data-modal-close="#my-modal">
   	Close
   </button>
 </div>
