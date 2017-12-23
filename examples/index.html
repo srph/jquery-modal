@@ -9,14 +9,21 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <main id="main">
-    <button type="button" class="button" data-modal="#modal">
-      Open Modal
-    </button>
+  <main id="main" class="app-wrapper">
+    <div>
+      <h1 class="app-title">
+        jQuery Modal
+        <small>Click one of the buttons below to test it out.</small>
+      </h1>
 
-    <button type="button" class="button" data-modal="#modal-2">
-      Open Modal 2
-    </button>
+      <button type="button" class="button" data-modal="#modal">
+        Open Modal
+      </button>
+
+      <button type="button" class="button -primary" data-modal="#modal-2">
+        Open Modal 2
+      </button>
+    </div>
   </main>
 
   <div class="modal" id="modal" style="display: none;">
