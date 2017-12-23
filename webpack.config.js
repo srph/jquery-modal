@@ -1,19 +1,13 @@
+var path = require('path')
+
 module.exports = {
-  entry: './lib/index.js',
+  entry: path.resolve(__dirname, 'lib/index.js'),
 
   output: {
-    path: './dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: process.env.NODE_ENV === 'production'
       ? 'jquery.modal.min.js'
       : 'jquery.modal.js'
-  },
-
-  module: {
-    loaders: [{
-      test: /$\.js/,
-      exclude: /node_modules/,
-      loader: 'imports-loader?$=jquery,@srph/jqt=>null',
-    }]
   },
 
   externals: [{

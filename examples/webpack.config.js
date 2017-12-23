@@ -1,8 +1,12 @@
+var path = require('path')
+
 module.exports = {
-  entry: './examples/script.js',
+  entry: path.resolve(__dirname, 'script.js'),
 
   output: {
-    path: './examples/',
+    path: __dirname,
     filename: 'bundle.js'
-  }
+  },
+
+  devtool: 'source-map'
 };
